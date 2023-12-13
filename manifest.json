@@ -1,7 +1,7 @@
 {
     "name": "SomeMusicPack",
-    "version_number": "1.0.0",
-    "website_url": "https://github.com/thunderstore-io",
+    "version_number": "1.1.0",
+    "website_url": "https://github.com/IvoteSligte/SomeMusicPack",
     "description": "Some songs for friends",
     "dependencies": [
         "CodeEnder-Custom_Boombox_Fix-1.2.2"
