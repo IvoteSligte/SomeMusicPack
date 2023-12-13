@@ -1,6 +1,13 @@
 import requests
 from pytube import Playlist
 import os
+import hashlib
+
+def unicode_to_ascii_hash(input_string):
+    hash_algorithm = hashlib.sha256()
+    hash_algorithm.update(input_string.encode('utf-8'))
+    hash_result = hash_algorithm.hexdigest()
+    return hash_result
 
 directory = "plugins/Custom Songs"
 playlist_url = "https://youtube.com/playlist?list=PLSX27Q9iirpV8z3Ed0kl3I-ThxrEWI538&si=tU7nM_fiEvSvA6IJ"
@@ -10,7 +17,8 @@ song_files = set()
 playlist = Playlist(playlist_url)
 for yt in playlist.videos:
     print("Downloading ", yt.title)
-    filename = yt.title.replace("/", ".") + ".mp3"
+    filename = unicode_to_ascii_hash(yt.title)
+    filename = filename.replace("/", ".") + ".mp3"
     song_files.add(filename)
 
     if os.path.isfile(os.path.join(directory, filename)):
