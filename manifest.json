@@ -1,7 +1,7 @@
 {
     "name": "SomeMusicPack",
-    "version_number": "1.5.0",
-    "website_url": "https://github.com/IvoteSligte/SomeMusicPack",
+    "version_number": "1.6.0",
+    "website_url": "https://thunderstore.io/c/lethal-company/p/Ivo/SomeMusicPack",
     "description": "Some songs for friends",
     "dependencies": [
         "CodeEnder-Custom_Boombox_Fix-1.2.2"
